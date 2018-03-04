@@ -14,6 +14,16 @@
     <p>
         <button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#addUserDiv"></button>
     </p>
+    <div class="alert alert-danger alert-dismissible fade in text-center hidden" id="deleteConfirm">
+        <button type="button" class="close">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+        <h4>确认删除？</h4>
+        <p>
+            <button type="button" class="btn btn-danger confirm">确定</button>
+            <button type="button" class="btn btn-default">取消</button>
+        </p>
+    </div>
     <div class="modal fade" id="addUserDiv">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -170,5 +180,6 @@
 </div>
 <script src="assets/plugins/jquery-3.2.1/jquery-3.2.1.min.js"></script>
 <script src="assets/plugins/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/js/list.js"></script>
 </body>
 </html>
