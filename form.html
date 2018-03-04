@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-3.3.7/css/bootstrap.min.css"></head>
+<body>
+<div class="page-header ">
+    <h2 class="col-lg-offset-4"><em>new user</em></h2>
+</div>
+<div class="container">
+    <form method="post" action="#" class="form-horizontal">
+        <div class="form-group">
+            <label for="inputUsername" class="col-lg-2 control-label">username</label>
+            <div class="col-lg-3">
+                <input id="inputUsername" name="username" class="form-control" placeholder="not blank" autofocus required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">password</label>
+            <div class="col-lg-3">
+                <input id="inputPassword" name="password" class="form-control" placeholder="not blank" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-3">
+                <input id="inputEmail" type="email" class="form-control" placeholder="not blank" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputSex" class="col-lg-2 control-label">sex</label>
+            <div class="col-lg-3">
+                <select id="inputSex" name="sex" class="form-control" required>
+                    <option value="1">male</option>
+                    <option value="2">female</option>
+                    <option value="0">secret</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Job</label>
+            <div class="radio col-lg-3">
+                <label class="radio-inline">
+                    <input type="radio" id="inputJob1" name="job" value="java" checked>java
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" id="inputJob2" name="job" value="Linux">Linux
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" id="inputJob3" name="job" value="C">C
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputIntro" class="col-lg-2 control-label">intro</label>
+            <div class="col-lg-4">
+                <textarea id="inputIntro" name="intro" class="form-control" cols="30" rows="10" required></textarea>
+            </div>
+        </div>
+        <div class="col-lg-2 col-lg-offset-2">
+            <button type="submit" class="btn btn-success btn-lg glyphicon glyphicon-ok"></button>
+        </div>
+        <div class="col-lg-2">
+            <button type="reset" class="btn btn-danger btn-lg glyphicon glyphicon-repeat"></button>
+        </div>
+    </form>
+</div>
+<script src="assets/plugins/jquery-3.2.1/jquery-3.2.1.min.js"></script>
+<script src="assets/plugins/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

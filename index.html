@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+<!-- nav bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">profile</a></li>
+                <li><a href="#">setting</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        system <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">help</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="login.html">sign out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- side bar -->
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="javascript:changeIframe('list.html');">list</a></li>
+                <li id="aaa"><a href="javascript:changeIframe('form.html');">form</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">tab3</a></li>
+                <li><a href="">tab4</a></li>
+            </ul>
+        </div>
+        <!-- main content -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <iframe id="iframe" src="list.html" width="100%" frameborder="0" scrolling="auto"
+                    onload="changeFrameHeight(this)"></iframe>
+        </div>
+    </div>
+</div>
+<script src="assets/plugins/jquery-3.2.1/jquery-3.2.1.min.js"></script>
+<script src="assets/plugins/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/js/index.js"></script>
+</body>
+</html>
