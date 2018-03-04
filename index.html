@@ -45,16 +45,41 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!-- side bar -->
         <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="javascript:changeIframe('list.html');">list</a></li>
-                <li id="aaa"><a href="javascript:changeIframe('form.html');">form</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="">tab3</a></li>
-                <li><a href="">tab4</a></li>
-            </ul>
+            <div class="nav-sidebar">
+                <div class="nav-sidebar-head">
+                    <ul class="nav">
+                        <li>
+                            <a href="#group1" data-toggle="collapse">
+                                <span class="glyphicon glyphicon-minus"></span>&nbsp;&nbsp;&nbsp;用户管理
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="group1" class="nav-sidebar-body collapse in">
+                    <ul class="nav">
+                        <li class="active"><a href="javascript:changeIframe('list.html');">list</a></li>
+                        <li><a href="javascript:changeIframe('form.html');">form</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-sidebar">
+                <div class="nav-sidebar-head">
+                    <ul class="nav">
+                        <li>
+                            <a href="#group2" data-toggle="collapse">
+                                <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;产品管理
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="group2" class="nav-sidebar-body collapse">
+                    <ul class="nav">
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">bbb</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!-- main content -->
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
