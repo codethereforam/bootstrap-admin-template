@@ -1,19 +1,24 @@
-// iframe高度自适应
-function changeFrameHeight(iframe) {
-    iframe.height = document.documentElement.clientHeight - 60;
-}
-
+//更改iframe的内容
 function changeIframe(src) {
     $("#iframe").attr("src", src);
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
+
+    //切换左侧导航栏+/-图标
     $(".nav-sidebar-head .nav li a").click(function () {
-        $(this).children("span").toggleClass("glyphicon-plus glyphicon-minus");
+        $(this).children().toggleClass("glyphicon-plus glyphicon-minus");
     });
 
-    $(".nav-sidebar-body .nav li").click(function () {
-        $(".nav-sidebar-body .nav li").removeClass("active");
+    var sidebarBodyLi = $(".nav-sidebar-body .nav li");
+    sidebarBodyLi.click(function () {
+        //切换左侧导航栏的选中栏
+        sidebarBodyLi.removeClass("active");
         $(this).addClass("active");
+    });
+
+    // iframe高度自适应
+    $("#iframe").on("load", function () {
+        $(this).height(document.documentElement.clientHeight - 60);
     });
 });
