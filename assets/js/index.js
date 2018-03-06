@@ -13,6 +13,6 @@ $(document).ready(function () {
 
     // iframe高度自适应
     $("#iframe").on("load", function () {
-        $(this).height(document.documentElement.clientHeight - 55);
+        $(this).height($(window).height() - 55);
     });
 });

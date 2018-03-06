@@ -3,12 +3,12 @@ $(document).ready(function () {
     var deleteConfirmBlock = $("#deleteConfirm");
     //显示确认删除警告框
     $(".glyphicon-trash").click(function () {
-        deleteConfirmBlock.removeClass("hidden");
+        deleteConfirmBlock.slideDown();
     });
 
     //隐藏确认删除警告框
     deleteConfirmBlock.find("button").click(function () {
-        deleteConfirmBlock.addClass("hidden");
+        deleteConfirmBlock.hide(500);
     });
 
     //点击确认删除后的操作
@@ -84,7 +84,7 @@ $(document).ready(function () {
             detailContent += '<dt>' + thsText[i] + ':</dt><dd>' + tdsText[i] + '</dd>';
         }
         var colNum = $(this).parents("tr").children().length;
-        var detail = '<tr class="detail-block info" style="display:none">\n' +
+        var detail = '<tr class="detail-block info">\n' +
             '                <td colspan="' + colNum + '">' +
             '<dl class="dl-horizontal">\n' +
             detailContent +
@@ -92,6 +92,13 @@ $(document).ready(function () {
             '</td>\n' +
             '         </tr>';
         $(this).parents("tr").after(detail);
-        $(this).parents("tr").next().fadeIn("slow");
+        var newRow = $(this).parents("tr").next();
+        newRow.hide();
+        newRow.fadeIn("slow");
     });
+
+    //set table show animate
+    var tableBlock = $("#tableBlock");
+    tableBlock.hide();
+    tableBlock.slideDown(1000);
 });
