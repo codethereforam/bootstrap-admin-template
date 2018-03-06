@@ -58,8 +58,8 @@
                 </div>
                 <div id="group1" class="nav-sidebar-body collapse in">
                     <ul class="nav">
-                        <li class="active"><a href="javascript:changeIframe('list.html');">list</a></li>
-                        <li><a href="javascript:changeIframe('form.html');">form</a></li>
+                        <li class="active"><a href="list.html" target="mainIframe">list</a></li>
+                        <li><a href="form.html" target="mainIframe">form</a></li>
                     </ul>
                 </div>
             </div>
@@ -75,15 +75,16 @@
                 </div>
                 <div id="group2" class="nav-sidebar-body collapse">
                     <ul class="nav">
-                        <li><a href="#">aaa</a></li>
-                        <li><a href="#">bbb</a></li>
+                        <li><a href="#" target="mainIframe">aaa</a></li>
+                        <li><a href="#" target="mainIframe">bbb</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- main content -->
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <iframe id="iframe" src="list.html" width="100%" frameborder="0" scrolling="auto"></iframe>
+            <iframe id="iframe" name="mainIframe" src="list.html" width="100%" frameborder="0"
+                    scrolling="auto"></iframe>
         </div>
     </div>
 </div>
