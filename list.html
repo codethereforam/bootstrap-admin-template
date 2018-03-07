@@ -19,6 +19,13 @@
                 </button>
             </p>
         </div>
+        <div class="col-sm-1">
+            <p>
+                <button class="btn btn-danger glyphicon glyphicon-trash" id="multiDeleteBtn"
+                        type="button" data-container="body" data-content="请至少选择一个"
+                        data-toggle="popover" data-placement="right" data-trigger="manual">批量删除</button>
+            </p>
+        </div>
         <div class="alert alert-danger alert-dismissible fade in text-center col-sm-4 col-sm-offset-2"
              id="deleteConfirm" style="display: none">
             <button type="button" class="close">
@@ -63,6 +70,7 @@
             <thead>
             <tr>
                 <th></th>
+                <th><input type="checkbox" title="全选" id="selectAllCheckBox"/></th>
                 <th>ID</th>
                 <th>username</th>
                 <th>password</th>
@@ -76,6 +84,7 @@
                 <td class="text-center">
                     <span class="detail glyphicon glyphicon-plus"></span>
                 </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
                 <td>1</td>
                 <td>u1</td>
                 <td>p1</td>
@@ -84,13 +93,14 @@
                 <td>
                     <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
                        data-target="#editDiv"></a>
-                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
                 </td>
             </tr>
             <tr>
                 <td class="text-center">
                     <span class="detail glyphicon glyphicon-plus"></span>
                 </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
                 <td>1</td>
                 <td>u1</td>
                 <td>p1</td>
@@ -99,27 +109,14 @@
                 <td>
                     <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
                        data-target="#editDiv"></a>
-                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash"></a>
-                </td>
-            </tr><tr>
-                <td class="text-center">
-                    <span class="detail glyphicon glyphicon-plus"></span>
-                </td>
-                <td>1</td>
-                <td>u1</td>
-                <td>p1</td>
-                <td>male</td>
-                <td>18</td>
-                <td>
-                    <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
-                       data-target="#editDiv"></a>
-                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
                 </td>
             </tr>
             <tr>
                 <td class="text-center">
                     <span class="detail glyphicon glyphicon-plus"></span>
                 </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
                 <td>1</td>
                 <td>u1</td>
                 <td>p1</td>
@@ -128,13 +125,14 @@
                 <td>
                     <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
                        data-target="#editDiv"></a>
-                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
                 </td>
             </tr>
             <tr>
                 <td class="text-center">
                     <span class="detail glyphicon glyphicon-plus"></span>
                 </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
                 <td>1</td>
                 <td>u1</td>
                 <td>p1</td>
@@ -143,13 +141,14 @@
                 <td>
                     <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
                        data-target="#editDiv"></a>
-                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
                 </td>
             </tr>
             <tr>
                 <td class="text-center">
                     <span class="detail glyphicon glyphicon-plus"></span>
                 </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
                 <td>1</td>
                 <td>u1</td>
                 <td>p1</td>
@@ -158,13 +157,14 @@
                 <td>
                     <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
                        data-target="#editDiv"></a>
-                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
                 </td>
             </tr>
             <tr>
                 <td class="text-center">
                     <span class="detail glyphicon glyphicon-plus"></span>
                 </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
                 <td>1</td>
                 <td>u1</td>
                 <td>p1</td>
@@ -173,10 +173,57 @@
                 <td>
                     <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
                        data-target="#editDiv"></a>
-                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
                 </td>
             </tr>
-
+            <tr>
+                <td class="text-center">
+                    <span class="detail glyphicon glyphicon-plus"></span>
+                </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
+                <td>1</td>
+                <td>u1</td>
+                <td>p1</td>
+                <td>male</td>
+                <td>18</td>
+                <td>
+                    <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
+                       data-target="#editDiv"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    <span class="detail glyphicon glyphicon-plus"></span>
+                </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
+                <td>1</td>
+                <td>u1</td>
+                <td>p1</td>
+                <td>male</td>
+                <td>18</td>
+                <td>
+                    <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
+                       data-target="#editDiv"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    <span class="detail glyphicon glyphicon-plus"></span>
+                </td>
+                <td><input type="checkbox" class="single-checkbox" title="select"></td>
+                <td>1</td>
+                <td>u1</td>
+                <td>p1</td>
+                <td>male</td>
+                <td>18</td>
+                <td>
+                    <a href="#" class="btn btn-primary glyphicon glyphicon-pencil" data-toggle="modal"
+                       data-target="#editDiv"></a>
+                    <a href="#" class="btn btn-danger glyphicon glyphicon-trash btn-single-delete"></a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

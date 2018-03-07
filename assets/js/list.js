@@ -1,9 +1,24 @@
 $(document).ready(function () {
     //确认删除区域
     var deleteConfirmBlock = $("#deleteConfirm");
+    var singleCheckBoxes = $(".single-checkbox");
+    var selectAllCheckBox = $("#selectAllCheckBox");
+    var multiDeleteBtn = $("#multiDeleteBtn");
+
     //显示确认删除警告框
-    $(".glyphicon-trash").click(function () {
+    $(".btn-single-delete").click(function () {
         deleteConfirmBlock.slideDown();
+    });
+
+    multiDeleteBtn.click(function () {
+        if (singleCheckBoxes.filter(":checked").length === 0) {
+            $(this).popover('show');
+            setTimeout(function () {
+                multiDeleteBtn.popover('hide');
+            }, 1000);
+        } else {
+            deleteConfirmBlock.slideDown();
+        }
     });
 
     //隐藏确认删除警告框
@@ -80,7 +95,7 @@ $(document).ready(function () {
         });
 
         var detailContent = '';
-        for (var i = 1; i < thsText.length - 1; i++) {
+        for (var i = 2; i < thsText.length - 1; i++) {
             detailContent += '<dt>' + thsText[i] + ':</dt><dd>' + tdsText[i] + '</dd>';
         }
         var colNum = $(this).parents("tr").children().length;
@@ -101,4 +116,22 @@ $(document).ready(function () {
     var tableBlock = $("#tableBlock");
     tableBlock.hide();
     tableBlock.slideDown(1000);
+
+    // checkbox select all
+    selectAllCheckBox.click(function () {
+        if ($(this).is(':checked')) {
+            singleCheckBoxes.prop("checked", true);
+        } else {
+            singleCheckBoxes.prop("checked", false);
+        }
+    });
+    singleCheckBoxes.click(function () {
+        if ($(this).is(':checked')) {
+            if (singleCheckBoxes.length === singleCheckBoxes.filter(":checked").length) {
+                selectAllCheckBox.prop("checked", true);
+            }
+        } else {
+            selectAllCheckBox.prop("checked", false);
+        }
+    });
 });
