@@ -8,11 +8,10 @@ $(document).ready(function () {
     sidebarBodyLi.click(function () {
         //切换左侧导航栏的选中栏
         sidebarBodyLi.removeClass("active");
-        $(this).addClass("active");
     });
 
     // iframe高度自适应
-    $("#iframe").on("load", function () {
+    $(".main-iframe").on("load", function () {
         $(this).height($(window).height() - 55);
     });
 });
