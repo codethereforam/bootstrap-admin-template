@@ -27,4 +27,17 @@ $(document).ready(function () {
     $(".main-iframe").on("load", function () {
         $(this).height($(window).height() - 55);
     });
+
+    var toggleSidebar = $("#toggleSidebar");
+    toggleSidebar.click(function () {
+        // change icon
+        toggleSidebar.toggleClass("glyphicon-arrow-left glyphicon-menu-hamburger");
+        // hide/show sidebar
+        $(".sidebar").toggle();
+        // stretch/collapse main content
+        mainContent.toggleClass("col-sm-offset-3");
+        mainContent.toggleClass("col-md-offset-2");
+        mainContent.toggleClass("col-sm-9");
+        mainContent.toggleClass("col-md-10");
+    });
 });
