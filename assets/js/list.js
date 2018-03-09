@@ -134,4 +134,8 @@ $(document).ready(function () {
             selectAllCheckBox.prop("checked", false);
         }
     });
+
+    $("#refreshBtn").click(function () {
+        window.location.reload(true);
+    });
 });

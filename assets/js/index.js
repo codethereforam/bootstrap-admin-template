@@ -7,7 +7,7 @@ $(document).ready(function () {
     var sidebarBodyLi = $(".nav-sidebar-body .nav li");
     sidebarBodyLi.click(function () {
         //切换左侧导航栏的选中栏
-        sidebarBodyLi.removeClass("active");
+        sidebarBodyLi.not(this).removeClass("active");
     });
 
     // 动态创建iframe
