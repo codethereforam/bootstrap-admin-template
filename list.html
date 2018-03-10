@@ -6,32 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/plugins/bootstrap-3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/list.css">
 </head>
 <body>
 <div class="container">
     <div class="page-header text-center">
         <h2 class="text-primary"><em>user manage</em></h2>
     </div>
-    <div class="row">
-        <div class="col-sm-1">
-            <p>
-                <button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal"
-                        data-target="#addDiv">新增用户
-                </button>
-            </p>
-        </div>
-        <div class="col-sm-1">
-            <p>
-                <button class="btn btn-danger glyphicon glyphicon-trash" id="multiDeleteBtn"
-                        type="button" data-container="body" data-content="请至少选择一个"
-                        data-toggle="popover" data-placement="right" data-trigger="manual">批量删除</button>
-            </p>
-        </div>
-        <div class="col-sm-1">
-            <p>
-                <button class="btn btn-warning glyphicon glyphicon-refresh" id="refreshBtn" title="刷新"></button>
-            </p>
-        </div>
+    <div class="btn-group" id="btnGroup1">
+        <button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal"
+                data-target="#addDiv">新增用户
+        </button>
+        <button class="btn btn-danger glyphicon glyphicon-trash" id="multiDeleteBtn"
+                type="button" data-container="body" data-content="请至少选择一个"
+                data-toggle="popover" data-placement="right" data-trigger="manual">批量删除
+        </button>
+        <button class="btn btn-warning glyphicon glyphicon-refresh" id="refreshBtn" title="刷新"></button>
         <div class="alert alert-danger alert-dismissible fade in text-center col-sm-4 col-sm-offset-2"
              id="deleteConfirm" style="display: none">
             <button type="button" class="close">

@@ -35,9 +35,9 @@ $(document).ready(function () {
         // hide/show sidebar
         $(".sidebar").toggle();
         // stretch/collapse main content
-        mainContent.toggleClass("col-sm-offset-3");
-        mainContent.toggleClass("col-md-offset-2");
-        mainContent.toggleClass("col-sm-9");
-        mainContent.toggleClass("col-md-10");
+        mainContent.toggleClass("col-sm-offset-3")
+            .toggleClass("col-md-offset-2")
+            .toggleClass("col-sm-9")
+            .toggleClass("col-md-10");
     });
 });
