@@ -4,6 +4,7 @@ $(document).ready(function () {
     var singleCheckBoxes = $(".single-checkbox");
     var selectAllCheckBox = $("#selectAllCheckBox");
     var multiDeleteBtn = $("#multiDeleteBtn");
+    var dropdownMenu1 = $("#dropdownMenu1");
 
     //显示确认删除警告框
     $(".btn-single-delete").click(function () {
@@ -137,5 +138,29 @@ $(document).ready(function () {
 
     $("#refreshBtn").click(function () {
         window.location.reload(true);
+    });
+
+    // init dropdown menu content
+    var dropdownMenuContent = '';
+    for (var i in thsText) {
+        if (thsText[i].trim().length !== 0) {
+            dropdownMenuContent += '<li>\n' +
+                '                <label>\n' +
+                '                    <input type="checkbox" checked="checked">' + thsText[i] + '\n' +
+                '                </label>\n' +
+                '            </li>';
+        }
+    }
+    dropdownMenu1.html(dropdownMenuContent);
+
+    // toggle a column of table
+    dropdownMenu1.find("input").click(function () {
+        var index = thsText.indexOf($(this).parents("label").text().trim());
+        // toggle th
+        tableBlock.find("th").eq(index).toggle();
+        // toggle td
+        tableBlock.find("tr").each(function () {
+            $(this).find("td").eq(index).toggle();
+        });
     });
 });
